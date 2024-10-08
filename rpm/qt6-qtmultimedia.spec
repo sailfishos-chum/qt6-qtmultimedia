@@ -38,6 +38,8 @@ BuildRequires: pkgconfig(gstreamer-video-%{gst})
 BuildRequires: pkgconfig(libpulse) pkgconfig(libpulse-mainloop-glib)
 BuildRequires: pkgconfig(xkbcommon) >= 0.5.0
 BuildRequires: openssl-devel
+BuildRequires: ffmpeg-devel
+
 # workaround missing dep
 # /usr/include/gstreamer-1.0/gst/gl/wayland/gstgldisplay_wayland.h:26:10: fatal error: wayland-client.h: No such file or directory
 BuildRequires: wayland-devel
@@ -69,6 +71,7 @@ Requires: pkgconfig(libpulse-mainloop-glib)
 %endif
 %cmake_qt6 \
   -DQT_FEATURE_alsa=ON \
+  -DQT_FEATURE_ffmpeg=ON \
   -DQT_BUILD_EXAMPLES:BOOL=OFF \
   -DQT_INSTALL_EXAMPLES_SOURCES=OFF
 
@@ -106,9 +109,7 @@ popd
 %{_qt6_archdatadir}/qml/QtQuick3D/SpatialAudio/
 %dir %{_qt6_plugindir}/multimedia
 %{_qt6_plugindir}/multimedia/libgstreamermediaplugin.so
-%if %{with ffmpeg}
 %{_qt6_plugindir}/multimedia/libffmpegmediaplugin.so
-%endif
 
 %files devel
 %{_qt6_headerdir}/QtQGstreamerMediaPlugin/
