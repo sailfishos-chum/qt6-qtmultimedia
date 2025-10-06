@@ -11,6 +11,8 @@ License: LGPL-3.0-only OR GPL-3.0-only WITH Qt-GPL-exception-1.0
 Url:     http://www.qt.io
 Source0: %{name}-%{version}.tar.bz2
 
+Patch1: 8145cd06af7550d2b6bf765ff7e0d84eda568ca9.patch
+
 # filter plugin/qml provides
 %global __provides_exclude_from ^(%{_qt6_archdatadir}/qml/.*\\.so|%{_qt6_plugindir}/.*\\.so)$
 

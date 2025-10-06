@@ -1,0 +1,25 @@
+From 8145cd06af7550d2b6bf765ff7e0d84eda568ca9 Mon Sep 17 00:00:00 2001
+From: Tim Blechmann <tim.blechmann@qt.io>
+Date: Sun, 13 Apr 2025 11:52:55 +0800
+Subject: [PATCH] GStreamer: add missing header
+
+Fixes: QTBUG-135939
+Pick-to: 6.8 6.9
+Change-Id: Id2f20baf08f015573211a04b2e447a9684c1e781
+Reviewed-by: Liang Qi <liang.qi@qt.io>
+---
+ .../multimedia/gstreamer/common/qgstreameraudiooutput.cpp        | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/plugins/multimedia/gstreamer/common/qgstreameraudiooutput.cpp b/src/plugins/multimedia/gstreamer/common/qgstreameraudiooutput.cpp
+index 4dc75000e6..3232ec8221 100644
+--- a/src/plugins/multimedia/gstreamer/common/qgstreameraudiooutput.cpp
++++ b/src/plugins/multimedia/gstreamer/common/qgstreameraudiooutput.cpp
+@@ -4,6 +4,7 @@
+ #include <common/qgstreameraudiooutput_p.h>
+ 
+ #include <QtCore/qloggingcategory.h>
++#include <QtCore/qversionnumber.h>
+ #include <QtMultimedia/qaudiodevice.h>
+ #include <QtMultimedia/qaudiooutput.h>
+ 
