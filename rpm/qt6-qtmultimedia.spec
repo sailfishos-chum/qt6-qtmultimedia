@@ -72,6 +72,7 @@ Requires: pkgconfig(libpulse-mainloop-glib)
 %cmake_qt6 \
   -DQT_FEATURE_alsa=OFF \
   -DQT_FEATURE_ffmpeg=ON \
+  -DQT_FEATURE_linux_v4l=OFF \
   -DQT_BUILD_EXAMPLES:BOOL=OFF \
   -DQT_INSTALL_EXAMPLES_SOURCES=OFF
 
