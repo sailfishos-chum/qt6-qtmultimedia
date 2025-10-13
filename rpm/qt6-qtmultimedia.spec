@@ -155,7 +155,7 @@ popd
 %{_qt6_libdir}/cmake/Qt6BuildInternals/StandaloneTests/*.cmake
 %dir %{_qt6_libdir}/cmake/Qt6BundledResonanceAudio/
 %{_qt6_libdir}/cmake/Qt6BundledResonanceAudio/*.cmake
-#%%dir #%{_qt6_libdir}/cmake/Qt6QGstreamerMediaPluginPrivate/
+#%%dir %%{_qt6_libdir}/cmake/Qt6QGstreamerMediaPluginPrivate/
 #%%{_qt6_libdir}/cmake/Qt6QGstreamerMediaPluginPrivate/*.cmake
 %dir  %{_qt6_libdir}/cmake/Qt6MultimediaQuickPrivate
 %{_qt6_libdir}/cmake/Qt6MultimediaQuickPrivate/*.cmake
