@@ -28,9 +28,7 @@ BuildRequires: qt6-qtdeclarative-devel
 BuildRequires: qt6-qtshadertools-devel
 BuildRequires: qt6-qtquick3d-devel
 BuildRequires: pkgconfig(alsa)
-%if "%{?gst}" == "0.10"
-BuildRequires: pkgconfig(gstreamer-interfaces-0.10)
-%endif
+BuildRequires: pulseaudio-devel
 BuildRequires: pkgconfig(gstreamer-%{gst})
 BuildRequires: pkgconfig(gstreamer-app-%{gst})
 BuildRequires: pkgconfig(gstreamer-audio-%{gst})
@@ -82,7 +80,7 @@ Requires: pkgconfig(libpulse-mainloop-glib)
   -DQT_FEATURE_gstreamer_gl_egl=ON \
   -DQT_FEATURE_gstreamer_gl_wayland=ON \
   -DQT_FEATURE_gstreamer_gl_x11=OFF \
-  -DQT_FEATURE_pulseaudio=OFF \
+  -DQT_FEATURE_pulseaudio=ON \
   -DQT_BUILD_EXAMPLES:BOOL=OFF \
   -DQT_INSTALL_EXAMPLES_SOURCES=OFF
 
